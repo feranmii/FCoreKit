@@ -5,16 +5,20 @@ import PackageDescription
 
 let package = Package(
     name: "FCoreKit",
-    platforms: [.iOS(.v14)],
+    platforms: [.iOS(.v15), .macOS(.v10_15)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        
+
         .library(
             name: "FNetworkKit",
             targets: ["FNetworkKit"]),
         .library(
             name: "FAnalyticsKit",
             targets: ["FAnalyticsKit"]),
+        .library(name: "FDesignKit", targets: ["FDesignKit"]),
+        .library(name: "FUtilities", targets: ["FUtilities"]),
+        .library(name: "FConfigKit", targets: ["FConfigKit"]),
+        .library(name: "FLoggingKit", targets: ["FLoggingKit"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -29,5 +33,11 @@ let package = Package(
         .target(
             name: "FAnalyticsKit",
             path: "Sources/FAnalyticsKit"),
+        .target(name: "FDesignKit", path: "Sources/FDesignKit"),
+        .target(name: "FUtilities", path: "Sources/FUtilities"),
+        .target(name: "FConfigKit", path: "Sources/FConfigKit"),
+        .target(name: "FLoggingKit", path: "Sources/FLoggingKit"),
+//        .testTarget(name: "FCoreKitTests", dependencies: ["FNetworkKit", "FAnalyticsKit", "FUIKit", "FUtilities", "FStorageKit", "FAuthKit", "FConfigKit", "FLoggingKit"], path: "Tests"),
+
     ]
 )
