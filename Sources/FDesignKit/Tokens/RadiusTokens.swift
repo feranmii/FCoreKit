@@ -36,6 +36,6 @@ public enum RadiusTokens: CaseIterable {
     }
     
     public static var allCases: [RadiusTokens] {
-        return [.none, .xs, .s, .m, .l, .xl, .custom(64)]
+        return [.none, .xs, .s, .m, .l, .xl]
     }
 }

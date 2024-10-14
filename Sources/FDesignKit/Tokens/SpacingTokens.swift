@@ -11,6 +11,7 @@ import SwiftUI
 
 public enum SpacingTokens: CaseIterable {
     case none
+    case xs
     case s
     case m
     case l
@@ -21,6 +22,8 @@ public enum SpacingTokens: CaseIterable {
         switch self {
         case .none:
             return 0
+        case .xs:
+            return 4
         case .s:
             return 8
         case .m:
